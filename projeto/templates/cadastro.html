@@ -6,7 +6,7 @@
 {% block content %}
     <h2>Cadastro de usuário</h2>
 
-    <form method="post">
+    <form method="post" action="{{url_for('new_user')}}">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
 
@@ -17,8 +17,8 @@
 
         <br><br>
 
-        <!-- A próxima equipe pode adicionar outros campos
-             e conferir a integração com a rota. -->
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
 
         <button type="submit">Cadastrar</button>
     </form>

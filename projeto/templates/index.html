@@ -9,10 +9,13 @@
 {% block content %}
     <header>
         <h1>Início</h1>
-        <a href="{{ url_for('livros') }}">Livros</a>
+        <a href="{{ url_for('listar_livro') }}">Livros</a>
         {% if usuario %}
             <a href="{{ url_for('logout') }}">Sair</a>
+            <a href="{{ url_for('new_book') }}">Cadastrar livro</a>
             {% else %}
+            <a href="{{ url_for('new_user') }}">Cadastrar usuário</a>
+            <a href="{{ url_for('new_book') }}">Cadastrar livro</a>
             <a href="{{ url_for('login') }}">Entrar</a>
         {% endif %}
     </header>
